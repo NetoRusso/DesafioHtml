@@ -8,236 +8,265 @@
   <title>Exercício-Aula 03-Tabela📔</title>
 
   <style>
-    body {
+    main {
+      display: flex;
+      flex-direction: column;
       margin: 200px;
+    }
+
+    .sair {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: fixed;
+    }
+    table {
+      width: 60%;
+      max-width: 500px;
+    }
+
+    @media (max-width: 1150px) {
+      main{
+        align-items: center;
+      }
+      .sair {
+        display: none;
+      }
+
     }
   </style>
 </head>
 
 <body>
-
-  <div style="display: flex; align-items: center; gap: 20px; position: fixed;">
-    <h2>Olá Secretário🤓</h2>
-    <button style="width: 90px; height: 30px;"><a href="../index.html" style="text-decoration: none; color:black;">
-        logoff</a></button>
-  </div>
-
-
-  <form action="./confirmacao.html" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-    <h2>
-      <font size="4" face="Georgia">
-        Cadastrar novo aluno na plataforma.
-      </font>
-    </h2>
-    <table border="0" width="500">
-      <tr>
-        <td colspan="2">
-          <label for="nome"><b>Nome do aluno*:</b></label>
-        </td>
-        <td colspan="8">
-          <input type="text" name="nome" id="nome" placeholder="Nome Completo do aluno" minlength="6" required style="width: 90%;">
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <label for="nascimento"><b>Data de Nascimento*:</b></label>
-        </td>
-        <td>
-          <input type="date" name="nascimento" id="nascimento" required style="width: 90%;">
-        </td>
-    </table>
-    <br><br>
-    <table border="0" width="500" style="border-collapse: collapse;">
-      <tr>
-        <td colspan="2">
-          <label for="genero"><b>Gênero:*</b></label>
-        </td>
-        <td colspan="8">
-        <td>
-          <input type="radio" name="genero" id="genero_masculino" value="masculino" required>
-        </td>
-        <td>
-          <p>Masculino</p>
-        </td>
-        <td>
-          <input type="radio" name="genero" id="genero_feminino" value="Feminino" required>
-        </td>
-        <td>
-          <p>Feminino</p>
-        </td>
-        <td>
-          <input type="radio" name="genero" id="genero_nb" value="Não Binário" required>
-        </td>
-        <td>
-          <p>Não Binário</p>
-        </td>
-        <td>
-          <input type="radio" name="genero" id="genero_ni" value="Não informado" required>
-        </td>
-        <td>
-          <p>Não informado</p>
-        </td>
-        </td>
-      </tr>
-    </table>
-    <br>
-    <h2>
-      <font size="4" face="Georgia">
-        Dados de contato:
-      </font>
-    </h2>
-    <br>
-    <table border="0" width="500">
-      <tr>
-        <td colspan="2">
-          <label for="cep"><b>Cep*:</b></label>
-        </td>
-        <td colspan="8">
-          <label for="logradouro"><b>Endereço:*</b></label>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <input name="cep" id="cep"  required placeholder="00.000-000">
-        </td>
-        <td colspan="8" width="300">
-          <input type="text" name="logradouro" id="logradouro" required placeholder="Nome da rua e numero" style="width: 95%;">
-        </td>
-      </tr>
-      <tr>
-        <td colspan="3">
-          <label for="bairro"><b>Bairro:*</b></label>
-        </td>
-        <td colspan="3">
-          <label for="cidade"><b>Cidade:*</b></label>
-        </td>
-        <td colspan="3">
-          <label for="estado" style="margin-left: -150px;"><b>Estado:*</b></label>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="3">
-          <input type="text" name="bairro" id="bairro" required placeholder="Bairro" width="165">
-        </td>
-        <td>
-          <input type="text" name="cidade" id="cidade" required placeholder="Cidade" width="165" >
-        </td>
-        <td colspan="3">
-          <select name="estado" id="estado" required >
-            <option value="disabled selected hidden">selecione um estado</option>
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option>
-            <option value="BA">Bahia</option>
-            <option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option>
-            <option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option>
-            <option value="MA">Maranhão</option>
-            <option value="MT">Mato Grosso</option>
-            <option value="MS">Mato Grosso do Sul</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="PA">Pará</option>
-            <option value="PB">Paraíba</option>
-            <option value="PR">Paraná</option>
-            <option value="PE">Pernambuco</option>
-            <option value="PI">Piauí</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="RN">Rio Grande do Norte</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="RO">Rondônia</option>
-            <option value="RR">Roraima</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="SP">São Paulo</option>
-            <option value="SE">Sergipe</option>
-            <option value="TO">Tocantins</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          <label for="telefone"><b>Telefone:*</b></label>
-        </td>
-        <td>
-          <label for="email" style="margin-left: -180px;"><b>E-mail:*</b></label>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          <input type="text" name="telefone" id="name" placeholder="telefone do aluno" minlength="12" maxlength="12" pattern="[0-9]{12}" required>
-        </td>
-        <td colspan="6">
-          <input type="email" name="email" id="email" placeholder="E-mail do aluno" required style="margin-left: -180px; width: 320px;">
-        </td>
-      </tr>
-    </table>
-    <br>
-    <h2>
-      <font size="4" face="Georgia">
-        Acadêmico
-      </font>
-    </h2>
-    <br>
-    <table border="0" width="500">
-      <tr>
-        <td colspan="4">
-          <label for="curso"><b>Curso Matriculado:*</b></label>
-        </td>
-        <td colspan="6">
-          <label for="periodo"><b>Períodos:*</b></label>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <select name="curso" id="curso" required>
-            <option value="disabled selected hidden">Selecione um curso</option>
-            <option value="Desenvolvimento web">Desenvolvimento web</option>
-            <option value="Ciência de Dados">Ciência de Dados</option>
-            <option value="Desenvolvimento Mobile">Desenvolvimento Mobile</option>
-            <option value="Programação de jogos">Programação de jogos</option>
-            <option value="Iteligência artificial">Iteligência artificial</option>
-            <option value="Cybersecurit">Cybersecurit</option>
-            <option value="Cloud computing">Cloud computing</option>
-          </select>
-        </td>
-        <td>
-          <input type="checkbox" name="periodo" id="periodo_manha" value="Manhã" checked>
-        </td>
-        <td>
-          <b>Manhã</b>
-        </td>
-        <td>
-          <input type="checkbox" name="periodo" id="periodo_tarde" value="Tarde">
-        </td>
-        <td>
-          <b>Tarde</b>
-        </td>
-        <td>
-          <input type="checkbox" name="periodo" id="periodo_noite" value="Noite">
-        </td>
-        <td>
-          <b>Noite</b>
-        </td>
-      </tr>
-    </table>
-    <br>
-    <label for="observacao"><b>Observações:</b></label>
-    <textarea name="observacao" id="observacao" placeholder="Algo a ser relatado?" style="width: 500px; height: 300px;"></textarea>
-    <br>
-
-    <div style="display: flex; gap: 20px; justify-content: flex-end; width: 500px;">
-      <button type="submit">Cadastrar</button>
-      <button type="reset" style="background-color: rgb(250, 85, 85);">Descartar🔥</button>
-
+  <main>
+    <div class="sair">
+      <h2>Olá Secretário🤓</h2>
+      <button style="width: 90px; height: 30px;"><a href="../index.html" style="text-decoration: none; color:black;">
+          logoff</a></button>
     </div>
 
-  </form>
+
+    <form action="./confirmacao.html"
+      style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h2>
+        <font size="4" face="Georgia">
+          Cadastrar novo aluno na plataforma.
+        </font>
+      </h2>
+      <table border="0">
+        <tr>
+          <td colspan="2">
+            <label for="nome"><b>Nome do aluno*:</b></label>
+          </td>
+          <td colspan="8">
+            <input type="text" name="nome" id="nome" placeholder="Nome Completo do aluno" minlength="6" required
+              style="width: 90%;">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <label for="nascimento"><b>Data de Nascimento*:</b></label>
+          </td>
+          <td>
+            <input type="date" name="nascimento" id="nascimento" required style="width: 90%;">
+          </td>
+      </table>
+      <br><br>
+      <table border="0" style="border-collapse: collapse;">
+        <tr>
+          <td colspan="2">
+            <label for="genero"><b>Gênero:*</b></label>
+          </td>
+          <td colspan="8">
+          <td>
+            <input type="radio" name="genero" id="genero_masculino" value="masculino" required>
+          </td>
+          <td>
+            <p>Masculino</p>
+          </td>
+          <td>
+            <input type="radio" name="genero" id="genero_feminino" value="Feminino" required>
+          </td>
+          <td>
+            <p>Feminino</p>
+          </td>
+          <td>
+            <input type="radio" name="genero" id="genero_nb" value="Não Binário" required>
+          </td>
+          <td>
+            <p>Não Binário</p>
+          </td>
+          <td>
+            <input type="radio" name="genero" id="genero_ni" value="Não informado" required>
+          </td>
+          <td>
+            <p>Não informado</p>
+          </td>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <h2>
+        <font size="4" face="Georgia">
+          Dados de contato:
+        </font>
+      </h2>
+      <br>
+      <table border="0" >
+        <tr>
+          <td colspan="2">
+            <label for="cep"><b>Cep*:</b></label>
+          </td>
+          <td colspan="8">
+            <label for="logradouro"><b>Endereço:*</b></label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input name="cep" id="cep" required placeholder="00.000-000">
+          </td>
+          <td colspan="8">
+            <input type="text" name="logradouro" id="logradouro" required placeholder="Nome da rua e numero"
+              style="width: 95%;">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <label for="bairro"><b>Bairro:*</b></label>
+          </td>
+          <td colspan="3">
+            <label for="cidade"><b>Cidade:*</b></label>
+          </td>
+          <td colspan="3">
+            <label for="estado" style="margin-left: -150px;"><b>Estado:*</b></label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <input type="text" name="bairro" id="bairro" required placeholder="Bairro" width="165">
+          </td>
+          <td>
+            <input type="text" name="cidade" id="cidade" required placeholder="Cidade" width="165">
+          </td>
+          <td colspan="3">
+            <select name="estado" id="estado" required>
+              <option value="disabled selected hidden">selecione um estado</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <label for="telefone"><b>Telefone:*</b></label>
+          </td>
+          <td>
+            <label for="email" style="margin-left: -180px;"><b>E-mail:*</b></label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <input type="text" name="telefone" id="name" placeholder="telefone do aluno" minlength="12" maxlength="12"
+              pattern="[0-9]{12}" required>
+          </td>
+          <td colspan="6">
+            <input type="email" name="email" id="email" placeholder="E-mail do aluno" required
+              style="margin-left: -180px; width: 320px;">
+          </td>
+        </tr>
+      </table>
+      <br>
+      <h2>
+        <font size="4" face="Georgia">
+          Acadêmico
+        </font>
+      </h2>
+      <br>
+      <table border="0" >
+        <tr>
+          <td colspan="4">
+            <label for="curso"><b>Curso Matriculado:*</b></label>
+          </td>
+          <td colspan="6">
+            <label for="periodo"><b>Períodos:*</b></label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <select name="curso" id="curso" required>
+              <option value="disabled selected hidden">Selecione um curso</option>
+              <option value="Desenvolvimento web">Desenvolvimento web</option>
+              <option value="Ciência de Dados">Ciência de Dados</option>
+              <option value="Desenvolvimento Mobile">Desenvolvimento Mobile</option>
+              <option value="Programação de jogos">Programação de jogos</option>
+              <option value="Iteligência artificial">Iteligência artificial</option>
+              <option value="Cybersecurit">Cybersecurit</option>
+              <option value="Cloud computing">Cloud computing</option>
+            </select>
+          </td>
+          <td>
+            <input type="checkbox" name="periodo" id="periodo_manha" value="Manhã" checked>
+          </td>
+          <td>
+            <b>Manhã</b>
+          </td>
+          <td>
+            <input type="checkbox" name="periodo" id="periodo_tarde" value="Tarde">
+          </td>
+          <td>
+            <b>Tarde</b>
+          </td>
+          <td>
+            <input type="checkbox" name="periodo" id="periodo_noite" value="Noite">
+          </td>
+          <td>
+            <b>Noite</b>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <label for="observacao"><b>Observações:</b></label>
+      <textarea name="observacao" id="observacao" placeholder="Algo a ser relatado?"
+        style="width: 500px; height: 300px;"></textarea>
+      <br>
+
+      <div style="display: flex; gap: 20px; justify-content: flex-end; width: 500px;">
+        <button type="submit">Cadastrar</button>
+        <button type="reset" style="background-color: rgb(250, 85, 85);">Descartar🔥</button>
+
+      </div>
+
+    </form>
 
 
 
 
-  
+  </main>
 </body>
 
 </html>
