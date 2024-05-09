@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Neto Russo">
+    <title>Exercício-Aula 03-Tabela📔</title>
+
+    <style>
+        body {
+            margin: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <table border="0">
+        <thead>
+            <tr>
+                <th colspan="6">
+                    <font size="4" face="Georgia">
+                        Realize o seu login na plataforma para cadastrar novo aluno.
+                    </font>
+                </th>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+        </thead>
+        <tbody>
+             <!-- Area do login do Secretário -->
+             <form action="./Pagina/matricula.html">
+                <tr>
+                    <td />
+                    <td>
+                        <label for="login"><b>Login</b><br></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td colspan="4">
+                        <input name="login" type="text" id="login" placeholder="Nome de usuario" required minlength="6">
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td>
+                        <label for="senha"><b>Senha</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td colspan="4">
+                        <input name="senha" type="password" id="senha" placeholder="Digite a sua senha" required minlength="8">    
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td>
+                        <a href="#"><font size="1">esqueci a senha</font></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td>
+                        <button type="submit">Login</button>
+                        <button type="reset"> resetar</button>
+                    </td>
+                    <td />
+                </tr>
+            </form>
+        </tbody>
+    </table>
+</body>
+
+</html>
